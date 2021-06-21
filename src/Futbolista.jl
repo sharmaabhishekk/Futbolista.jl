@@ -9,7 +9,7 @@ using Plots
 include("DataLoaders.jl")
 include("Plotter.jl")
 
-using .Plotter: Pitch
-using .DataLoaders: StatsbombLoader
+using .Plotter
+using .DataLoaders
 
 end ##end of module

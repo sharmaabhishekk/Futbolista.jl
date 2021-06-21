@@ -1,6 +1,6 @@
 module DataLoaders
 
 include("sbloader.jl")
-using .StatsbombLoader 
+using .Statsbomb
 
 end ##end of module

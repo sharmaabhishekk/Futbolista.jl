@@ -1,9 +1,9 @@
-module Pitch
+module StatsbombPitch
 
 using Plots
 
 """
-pitch_plot()
+plot_pitch()
 
 Plots a football pitch according to Statsbomb dimensions
 
@@ -12,7 +12,7 @@ line_color = color of the line
 line_width = width of the lines
 
 """
-function pitch_plot(;line_color, line_width)
+function plot_pitch(;line_color, line_width)
     
     x1 = [0, 120, 120, 0, 0]; y1 = [0, 0, 80, 80, 0] ## pitch outlines 
     x2 = [0, 18, 18, 0, 0]; y2 = [18, 18, 62, 62, 18] ## left d-box 

@@ -1,8 +1,5 @@
 <img src="logo/futbolista.png" alt="Futbolista Logo">
 
-<H4 align="center"> <i>A Julia package to make football analytics easy</i> </H4>
-
-
 [![Build Status](https://travis-ci.com/sharmaabhishekk/Futbolista.jl.svg?branch=master)](https://travis-ci.com/sharmaabhishekk/Futbolista.jl)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/sharmaabhishekk/Futbolista.jl?svg=true)](https://ci.appveyor.com/project/sharmaabhishekk/Futbolista-jl)
 [![Coverage](https://codecov.io/gh/sharmaabhishekk/Futbolista.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/sharmaabhishekk/Futbolista.jl)

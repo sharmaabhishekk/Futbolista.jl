@@ -1,4 +1,4 @@
-module StatsbombLoader
+module Statsbomb
 
 using DataFrames
 using JSON: Parser, parsefile
@@ -69,11 +69,11 @@ function load_matches(loader::SBLoader, comp_id, season_id)
     end
     
     df = vcat(DataFrame.(matches)..., cols=:union)
-    df_home = vcat(DataFrame.(df["home_team"])..., cols=:union)
-    df_away = vcat(DataFrame.(df["away_team"])..., cols=:union)
+    df_home = vcat(DataFrame.(df."home_team")..., cols=:union)
+    df_away = vcat(DataFrame.(df."away_team")..., cols=:union)
 
     df = hcat([df, df_home, df_away]..., makeunique=true)    
-    deletecols!(df, [:home_team, :away_team])        
+    select!(df, Not([:home_team, :away_team]))        
     
     df
 end
@@ -106,7 +106,7 @@ function load_events(loader::SBLoader, match_id)
         data = Parser.parse(str)
     end
         
-    data = [Dict(isa(v, Array) ? k=>string(v) : k=> v for (k,v) in d) for d in data]      
+    data = [Dict(isa(v, Array) ? k=>string(v) : k=> v for (k,v) in d) for d in data]     ##converting arrays to string to stop duplicating rows 
     events = vcat(DataFrame.(data)..., cols=:union)
 end
 
