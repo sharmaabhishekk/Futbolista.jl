@@ -6,7 +6,7 @@ using Test
 
 @testset "DataLoaders Tests" begin
 
-    const sb = DataLoaders.Statsbomb
+    sb = DataLoaders.Statsbomb
     ldr = sb.SBLoader()
 
 	comp_df = sb.load_competitions(ldr)
@@ -20,9 +20,9 @@ end
 
 @testset "Plotting Tests" begin
 
-    const pl = Plotter.StatsbombPitch
-    const pm = Plotter.Passmap
-    const sb = DataLoaders.Statsbomb
+    sb = DataLoaders.Statsbomb
+    pl = Plotter.StatsbombPitch
+    pm = Plotter.Passmap
 
     ldr = sb.SBLoader()
 	events_df = sb.load_events(ldr, 7298)
