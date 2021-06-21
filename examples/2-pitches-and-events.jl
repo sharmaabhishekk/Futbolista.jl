@@ -15,10 +15,8 @@ end
 
 # ╔═╡ 781a3590-d1ed-11eb-17ae-fdf1ffd5bdb0
 begin
-	using Pkg
 	using Plots
 	using PlutoUI
-	Pkg.activate("../")	
 end
 
 # ╔═╡ f2bc9edf-548c-4958-82f4-e65d6fe99f3d

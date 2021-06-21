@@ -6,13 +6,11 @@ using InteractiveUtils
 
 # ╔═╡ 6f58c330-cce4-11eb-3e45-6787cd75141f
 begin
-	using Pkg
-	Pkg.activate("../")
+	using Futbolista: DataLoaders, Plotter
 end
 
 # ╔═╡ e850ce3c-f57e-41ab-acb3-958a1b5951a9
 begin
-	using Futbolista: DataLoaders, Plotter
 	const sb = DataLoaders.Statsbomb
 	const pm = Plotter.Passmap
 	
